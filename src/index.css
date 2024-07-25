@@ -1,0 +1,139 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.header {
+  display: flex;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  position: absolute;
+  width: 100%;
+  min-height: 80px;
+  z-index: 15;
+}
+
+.header__outer__container {
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1330px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 48em) {
+  .header__outer__container {
+    padding: 0 45px;
+  }
+}
+
+@media screen and (min-width: 30em) {
+  .header__outer__container {
+    padding: 0 32px;
+  }
+}
+
+.header__inner__container {
+  width: 85px;
+}
+
+@media screen and (min-width: 30em) {
+  .header__inner__container {
+    width: 85px;
+  }
+}
+
+@media screen and (min-width: 48em) {
+  .header__inner__container {
+    width: 85px;
+  }
+}
+
+@media screen and (min-width: 64em) {
+  .header__inner__container {
+    width: 85px;
+  }
+}
+
+@media screen and (min-width: 80em) {
+  .header__inner__container {
+    width: 110px;
+  }
+}
+
+.logo {
+  width: 100px;
+  height: 80px;
+}
+
+@media screen and (min-width: 768px) {
+  .logo {
+    width: 120px;
+    height: 90px;
+  }
+}
+
+.animation_video {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 0;
+}
+
+.apply_now {
+  background-color: rgba(253, 239, 120, 1);
+}
+
+.consent input[type="checkbox"] {
+  padding: 0;
+  height: auto;
+  width: auto;
+  margin-bottom: 0;
+  display: none;
+  cursor: pointer;
+}
+
+.consent label {
+  display: flex;
+  position: relative;
+  align-items: center;
+}
+
+.consent label:before {
+  content: "";
+  -webkit-appearance: none;
+  background-color: #fff;
+  box-shadow: 0 1px 2px rgb(0 0 0 / 5%),
+    inset 0 -15px 10px -12px rgb(0 0 0 / 5%);
+  padding: 6px;
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+  cursor: pointer;
+  margin-right: 8px;
+  border-radius: 3px;
+}
+
+.consent input[type="checkbox"]:checked + label:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 7px;
+  left: 3px;
+  width: 5px;
+  height: 8px;
+  border: solid #000;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
